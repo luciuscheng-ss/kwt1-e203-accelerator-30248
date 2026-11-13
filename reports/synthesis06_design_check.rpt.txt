@@ -1,0 +1,53 @@
+Original report SHA256: a83f43988f08685dc59aad3f067d05ff0c044a7d788900a3d316a60272fee9d8
+Original bytes: 3268853
+Complete original report: False
+
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03-SP5-5
+Date:        Fri Nov 13 16:46:35 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                  14914
+    Unloaded inputs (LINT-8)                                      119
+    Unconnected ports (LINT-28)                                  4828
+    Feedthrough (LINT-29)                                        4232
+    Shorted outputs (LINT-31)                                    3130
+    Constant outputs (LINT-52)                                   2605
+
+Cells                                                            5654
+    Cells do not drive (LINT-1)                                     4
+    Connected to power or ground (LINT-32)                       4540
+    Nets connected to multiple pins on same cell (LINT-33)       1110
+
+Nets                                                              119
+    Unloaded nets (LINT-2)                                        119
+--------------------------------------------------------------------------------
+
+Warning: In design 'sirv_debug_csr_PC_SIZE32', cell 'ndreset_dfflr' does not drive any nets. (LINT-1)
+Warning: In design 'sirv_debug_csr_PC_SIZE32', cell 'fullreset_dfflr' does not drive any nets. (LINT-1)
+Warning: In design 'sirv_aon_wrapper', cell 'u_aon_porrst' does not drive any nets. (LINT-1)
+Warning: In design 'sirv_plic_man_PLIC_PRIO_WIDTH3_PLIC_IRQ_NUM17_PLIC_IRQ_NUM_LOG26_PLIC_ICB_RSP_FLOP1_PLIC_IRQ_I_FLOP1_PLIC_IRQ_O_FLOP1', cell 'flop_o_irq.plic_irq_prio_dffr' does not drive any nets. (LINT-1)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[27]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[27]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[28]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[28]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[29]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[29]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[30]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[30]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[31]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[31]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[32]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68/B[32]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[26]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[26]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[28]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[28]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[29]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[29]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[30]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[30]' has no loads. (LINT-2)
+Warning: In design 'e203_soc_top', net 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[31]' driven by pin 'u_e203_subsys_top/u_e203_subsys_main/u_kwt_systembus/engine/sub_68_G2/B[31]' has no loads. (LINT-2)
+[EXCERPT: middle26315 lines omitted]
+Warning: In design 'timer_cntrl_1', output port 'status_o[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'timer_cntrl_1', output port 'status_o[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'timer_cntrl_1', output port 'status_o[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'timer_cntrl_1', output port 'status_o[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'timer_cntrl_1', output port 'status_o[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'timer_cntrl_1', output port 'status_o[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'timer_cntrl_1', output port 'status_o[1]' is connected directly to 'logic 0'. (LINT-52)
+1

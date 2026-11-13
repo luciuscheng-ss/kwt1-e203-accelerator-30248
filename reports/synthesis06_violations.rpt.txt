@@ -1,0 +1,25 @@
+Original report SHA256: 5c731dce23b650189267705e6a29bf4754fdc9c070ce161be28df1e1ee816927
+Original bytes: 632
+Complete original report: True
+
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : e203_soc_top
+Version: T-2022.03-SP5-5
+Date   : Fri Nov 13 16:46:47 2026
+****************************************
+
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   e203_soc_top             0.000000000    2742537.250000000
+                                                          -2742537.250000000
+                                                                    (VIOLATED)
+
+
+1

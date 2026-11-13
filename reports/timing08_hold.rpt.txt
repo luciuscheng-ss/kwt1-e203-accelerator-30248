@@ -1,0 +1,91 @@
+Original report SHA256: 62858d066d848b606521cae34759f53c23e75b5b6c104de01eedff6b5371106d
+Original bytes: 231291
+Complete original report: False
+
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type min
+	-input_pins
+	-nets
+	-slack_lesser_than 1000000.000000000000
+	-max_paths 40
+	-sort_by slack
+Design : e203_soc_top
+Version: T-2022.03-SP5-1
+Date   : Fri Nov 13 16:53:22 2026
+****************************************
+
+
+  Startpoint: u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_sirv_gnrl_icb_buffer/u_sirv_gnrl_cmd_fifo/dp_gt0.fifo_rf[0].fifo_rf_dffl/qout_r_reg[42]
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: u_kwt_shared_sram/banks[13].macro
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                      Fanout       Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000000000
+                                                                 0.000000000000
+  clock network delay (ideal)                         0.000000000000
+                                                                 0.000000000000
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_sirv_gnrl_icb_buffer/u_sirv_gnrl_cmd_fifo/dp_gt0.fifo_rf[0].fifo_rf_dffl/qout_r_reg[42]/CK (DQV2_12TR40)
+                                                      0.000000000000
+                                                                 0.000000000000 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_sirv_gnrl_icb_buffer/u_sirv_gnrl_cmd_fifo/dp_gt0.fifo_rf[0].fifo_rf_dffl/qout_r_reg[42]/Q (DQV2_12TR40)
+                                                      0.240106821060
+                                                                 0.240106821060 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_sirv_gnrl_icb_buffer/u_sirv_gnrl_cmd_fifo/dp_gt0.fifo_rf[0].fifo_rf_dffl/qout[42] (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_sirv_gnrl_icb_buffer/u_sirv_gnrl_cmd_fifo/U84/B1 (AO22V2_12TR40)
+                                                      0.000000000000
+                                                                 0.240106821060 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_sirv_gnrl_icb_buffer/u_sirv_gnrl_cmd_fifo/U84/Z (AO22V2_12TR40)
+                                                      0.063501179218
+                                                                 0.303608000278 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_sirv_gnrl_icb_buffer/u_sirv_gnrl_cmd_fifo/o_dat[42] (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_i_icb_splt/U1045/I (INV2_12TR40)
+                                                      0.000000000000
+                                                                 0.303608000278 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_i_icb_splt/U1045/ZN (INV2_12TR40)
+                                                      0.077323764563
+                                                                 0.380931764841 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_i_icb_splt/n296 (net)
+                                                9 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_i_icb_splt/U391/A2 (NOR2V2_12TR40)
+                                                      0.000000000000
+                                                                 0.380931764841 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_i_icb_splt/U391/ZN (NOR2V2_12TR40)
+                                                      0.053634762764
+                                                                 0.434566527605 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_mems/u_sirv_mem_fab/u_i_icb_splt/o_bus_icb_cmd_wdata[157] (net)
+                                                2 
+  u_kwt_shared_sram/U130/I (BUFV2RD_12TR40)           0.000000000000
+                                                                 0.434566527605 f
+  u_kwt_shared_sram/U130/Z (BUFV2RD_12TR40)           0.146747797728
+                                                                 0.581314325333 f
+  u_kwt_shared_sram/n497 (net)                 16 
+  u_kwt_shared_sram/banks[13].macro/D[29] (RAMSP8KX32)
+                                                      0.000000000000
+                                                                 0.581314325333 f
+  data arrival time                                              0.581314325333
+
+  clock core_clk (rise edge)                          0.000000000000
+                                                                 0.000000000000
+  clock network delay (ideal)                         0.000000000000
+                                                                 0.000000000000
+  clock reconvergence pessimism                       0.000000000000
+                                                                 0.000000000000
+  clock uncertainty                                   0.100000001490
+                                                                 0.100000001490
+  u_kwt_shared_sram/banks[13].macro/CLK (RAMSP8KX32)             0.100000001490 r
+  library hold time                                   0.480682075024
+                                                                 0.580682098866
+  data required time                                             0.580682098866
+  ------------------------------------------------------------------------------
+  data required time                                             0.580682098866
+  data arrival time                                              -0.581314325333
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    0.000632248819

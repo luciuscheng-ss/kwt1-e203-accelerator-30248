@@ -1,0 +1,82 @@
+Original report SHA256: bba3b93ee1304824c199830e00c0bffda933d2cf41bdbfb5873ba0e31bf2f00c
+Original bytes: 349113
+Complete original report: False
+
+ 
+****************************************
+Report : area
+Design : e203_soc_top
+Version: T-2022.03-SP5-5
+Date   : Fri Nov 13 16:46:35 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'e203_soc_top' contains 7 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim3/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'D' in design 'e203_soc_top'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim2/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'D' in design 'e203_soc_top'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim1/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'D' in design 'e203_soc_top'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim0/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'D' in design 'e203_soc_top'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim0/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'CK' in design 'e203_soc_top'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim1/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'CK' in design 'e203_soc_top'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim3/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'CK' in design 'e203_soc_top'. (TIM-141)
+Warning: Gated clock latch is not created for cell 'u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_perips/u_perips_apb_pwm/u_tim2/u_in_stage/r_ls_clk_sync_reg[0]'on pin 'CK' in design 'e203_soc_top'. (TIM-141)
+Library(s) Used:
+
+    scc40nll_vhsc40_rvt_ss_v0p99_125c_basic (File: /home/2026contest/server6/s6_19usr/kwt_ffn_validated_20261103_054926/platform/resources/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_ss_v0p99_125c_basic.db)
+    ROM1KX32_ss_0p99v_0p99v_125c (File: /home/2026contest/server6/s6_19usr/kwt_ffn_validated_20261103_054926/platform/resources/e203_hbirdv2-master/rtl/e203/mem_gen/ROM1KX32/db/ROM1KX32_ss_0p99v_0p99v_125c.db)
+    RAMSP128X16_ss_0p99v_0p99v_125c (File: /home/2026contest/server6/s6_19usr/kwt_ffn_validated_20261103_054926/platform/resources/macro_db_01/ss_0p99v_0p99v_125c/RAMSP128X16_ss_0p99v_0p99v_125c.db)
+    RAMSP1024X16_ss_0p99v_0p99v_125c (File: /home/2026contest/server6/s6_19usr/kwt_ffn_validated_20261103_054926/platform/resources/macro_db_01/ss_0p99v_0p99v_125c/RAMSP1024X16_ss_0p99v_0p99v_125c.db)
+    RAMSP8KX32_ss_0p99v_0p99v_125c (File: /home/2026contest/server6/s6_19usr/kwt_ffn_validated_20261103_054926/platform/resources/e203_hbirdv2-master/rtl/e203/mem_gen/RAMSP8KX32/db/RAMSP8KX32_ss_0p99v_0p99v_125c.db)
+    RAMSP4KX64_ss_0p99v_0p99v_125c (File: /home/2026contest/server6/s6_19usr/kwt_ffn_validated_20261103_054926/platform/resources/e203_hbirdv2-master/rtl/e203/mem_gen/RAMSP4KX64/db/RAMSP4KX64_ss_0p99v_0p99v_125c.db)
+
+Number of ports:                       106931
+Number of nets:                        266902
+Number of cells:                       154762
+Number of combinational cells:         123283
+Number of sequential cells:             27753
+Number of macros/black boxes:              56
+Number of buf/inv:                      21807
+Number of references:                       2
+
+Combinational area:             234311.316848
+Buf/Inv area:                    15623.882704
+Noncombinational area:          145110.873661
+Macro/Black Box area:          2363115.051758
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               2742537.242267
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                  Local cell area
+                                  ---------------------  -------------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes         Design
+--------------------------------  ------------  -------  -----------  -----------  ------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+e203_soc_top                      2742537.2423    100.0       0.0000       0.0000        0.0000  e203_soc_top
+u_e203_subsys_top                 1255457.1295     45.8       0.0000       0.0000        0.0000  e203_subsys_top
+u_e203_subsys_top/u_e203_subsys_main
+                                  1238065.5175     45.1     120.0192       0.0000        0.0000  e203_subsys_main
+u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top
+                                   783928.3946     28.6       0.0000       0.0000        0.0000  e203_cpu_top
+u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu
+                                    42799.9324      1.6       0.0000       0.0000        0.0000  e203_cpu_MASTER1
+u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_clk_ctrl
+                                       50.4336      0.0      11.4912       0.0000        0.0000  e203_clk_ctrl
+u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_clk_ctrl/dtcm_active_dffr
+                                        6.0648      0.0       0.0000       6.0648        0.0000  sirv_gnrl_dffr_DW1_20
+[EXCERPT: middle3002 lines omitted]
+                                      271.6392      0.0      77.5656     194.0736        0.0000  sirv_gnrl_dfflr_DW32_28
+u_e203_subsys_top/u_sirv_debug_module/u_sirv_debug_ram/debug_ram_gen[5].ram_dfflr
+                                      271.6392      0.0      77.5656     194.0736        0.0000  sirv_gnrl_dfflr_DW32_27
+u_e203_subsys_top/u_sirv_debug_module/u_sirv_debug_ram/debug_ram_gen[6].ram_dfflr
+                                      272.5968      0.0      78.5232     194.0736        0.0000  sirv_gnrl_dfflr_DW32_26
+u_e203_subsys_top/u_sirv_debug_module/u_sirv_debug_rom
+                                      131.8296      0.0     131.8296       0.0000        0.0000  sirv_debug_rom
+u_kwt_shared_sram                 1487080.1128     54.2     902.3784     201.7344  1485976.0000  kwt_shared_sram512
+--------------------------------  ------------  -------  -----------  -----------  ------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                    234311.3168  145110.8737  2363115.0518
+
+1

@@ -1,0 +1,39 @@
+Original report SHA256: 202c3fad86dc2639b40b389e2dfd13bb1ec187684160e83a8bf2c448f5e175e4
+Original bytes: 1774
+Complete original report: True
+
+# Full supplied digital SoC; no datapath/CDC removed.
+create_clock -name core_clk -period 6.666666666667 [get_ports hfextclk]
+create_clock -name lf_clk -period 30517.578125 [get_ports lfextclk]
+create_clock -name jtag_clk -period 100.0 [get_ports io_pads_jtag_TCK_i_ival]
+set_clock_uncertainty -setup 0.100 [all_clocks]
+set_clock_uncertainty -hold 0.100 [all_clocks]
+set_clock_latency -source 0 [all_clocks]
+set_clock_latency 0 [all_clocks]
+set_clock_transition 0.100 [all_clocks]
+set_clock_gating_check -setup 0.1 -hold 0.05 [current_design]
+set cps [get_ports {hfextclk lfextclk io_pads_jtag_TCK_i_ival}]
+set ips [remove_from_collection [all_inputs] $cps]
+set_input_delay -max 2.0 -clock core_clk $ips
+set_input_delay -min 0.2 -clock core_clk $ips
+set_input_transition 0.1 [all_inputs]
+set_output_delay -max 2.0 -clock core_clk [all_outputs]
+set_output_delay -min 0.2 -clock core_clk [all_outputs]
+set_load 0.05 [all_outputs]
+# Original RTL samples TMS/TDI rising edge and drives TDO/OE falling edge.
+set ji [get_ports {io_pads_jtag_TMS_i_ival io_pads_jtag_TDI_i_ival}]
+set jo [get_ports {io_pads_jtag_TDO_o_oval io_pads_jtag_TDO_o_oe}]
+remove_input_delay $ji
+remove_output_delay $jo
+set_input_delay -clock jtag_clk -clock_fall -max 2.0 $ji
+set_input_delay -clock jtag_clk -clock_fall -min 0.2 $ji
+set_output_delay -clock jtag_clk -max 2.0 $jo
+set_output_delay -clock jtag_clk -min -0.2 $jo
+set_fix_hold [all_clocks]
+
+set_case_analysis 1 [get_ports io_pads_dbgmode0_n_i_ival]
+set_case_analysis 1 [get_ports io_pads_dbgmode1_n_i_ival]
+set_case_analysis 1 [get_ports io_pads_dbgmode2_n_i_ival]
+set_case_analysis 0 [get_ports io_pads_bootrom_n_i_ival]
+set_case_analysis 1 [get_ports io_pads_aon_pmu_dwakeup_n_i_ival]
+set_case_analysis 1 [get_ports io_pads_aon_erst_n_i_ival]

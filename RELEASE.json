@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "pdf": "KWT30248_Complete_Report.pdf",
+  "sha256": "8ef0da5a07fe06c046f6ac0ddbace3c19454bbbaa5f54f0f8cdd10f18145a126",
+  "pages": 18,
+  "preserved_base_pages": 9,
+  "appendix_pages": 9,
+  "original_pdf_sha256": "0d9fc7f2a5840c80f822a53aae22385e0e20071a686a854d67e570e55f46ab09",
+  "original9_content_streams_identical": true,
+  "embedded_engineering_zip": "KWT30248_Engineering_Source.zip",
+  "embedded_zip_sha256": "37cc20f94f42c54309dea44169697dc7251bfbf69ce78d010303d51ab42567e7",
+  "repository": "https://github.com/luciuscheng-ss/kwt1-e203-accelerator-30248",
+  "tag": "v20261113.1",
+  "frozen_source_manifest_sha256": "3cd1ff2bf37de0745efc9998461d4cbd4a1b27954fe440d88d843c37410ccbc9",
+  "mapped_sha256": "d450453c3757474b56e5d1736357a786d73da36102be05522b9dd450b53947eb",
+  "all_attachments_readback_exact": true,
+  "pdf_download_url": "https://github.com/luciuscheng-ss/kwt1-e203-accelerator-30248/releases/download/v20261113.1/KWT30248_Complete_Report.pdf",
+  "source_download_url": "https://github.com/luciuscheng-ss/kwt1-e203-accelerator-30248/archive/refs/tags/v20261113.1.zip"
+}

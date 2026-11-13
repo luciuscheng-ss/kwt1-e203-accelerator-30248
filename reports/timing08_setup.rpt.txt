@@ -1,0 +1,447 @@
+Original report SHA256: 96b693498a8fd9bd787b1f58ef78622ef31764a6c122718d907d8003bb039dd7
+Original bytes: 1590323
+Complete original report: False
+
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-input_pins
+	-nets
+	-slack_lesser_than 1000000.000000000000
+	-max_paths 40
+	-sort_by slack
+Design : e203_soc_top
+Version: T-2022.03-SP5-1
+Date   : Fri Nov 13 16:53:22 2026
+****************************************
+
+
+  Startpoint: u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/u_RAMSP4KX64_0
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/u_RAMSP4KX64_0
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                      Fanout       Incr       Path
+  ------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000000000
+                                                                 0.000000000000
+  clock network delay (ideal)                         0.000000000000
+                                                                 0.000000000000
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/u_RAMSP4KX64_0/CLK (RAMSP4KX64)
+                                                      0.000000000000
+                                                                 0.000000000000 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/u_RAMSP4KX64_0/Q[33] (RAMSP4KX64)
+                                                      3.193277597427
+                                                                 3.193277597427 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/RDATA_0[33] (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/U122/A1 (AOI22V8_12TR40)
+                                                      0.000000000000
+                                                                 3.193277597427 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/U122/ZN (AOI22V8_12TR40)
+                                                      0.073705434799
+                                                                 3.266983032227 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/n108 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/U24/A2 (CLKNAND2V6_12TR40)
+                                                      0.000000000000
+                                                                 3.266983032227 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/U24/ZN (CLKNAND2V6_12TR40)
+                                                      0.051054954529
+                                                                 3.318037986755 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/RDATA[33] (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U84/I (INV4_12TR40)
+                                                      0.000000000000
+                                                                 3.318037986755 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U84/ZN (INV4_12TR40)
+                                                      0.029336452484
+                                                                 3.347374439240 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/n2 (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U169/A1 (NOR2V4_12TR40)
+                                                      0.000000000000
+                                                                 3.347374439240 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U169/ZN (NOR2V4_12TR40)
+                                                      0.021146297455
+                                                                 3.368520736694 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/n308 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U197/A2 (NOR3CV8_12TR40)
+                                                      0.000000000000
+                                                                 3.368520736694 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U197/ZN (NOR3CV8_12TR40)
+                                                      0.057404041290
+                                                                 3.425924777985 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net592540 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U65/A1 (NAND2CV4_12TR40)
+                                                      0.000000000000
+                                                                 3.425924777985 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U65/ZN (NAND2CV4_12TR40)
+                                                      0.036506652832
+                                                                 3.462431430817 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/ifu_rsp_bypbuf_i_data[1] (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/u_e203_ifetch_rsp_bypbuf/U28/I0 (MUX2V12_12TR40)
+                                                      0.000000000000
+                                                                 3.462431430817 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/u_e203_ifetch_rsp_bypbuf/U28/Z (MUX2V12_12TR40)
+                                                      0.102880001068
+                                                                 3.565311431885 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/u_e203_ifetch_rsp_bypbuf/o_dat[1] (net)
+                                                4 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U199/I (CLKINV7_12TR40)
+                                                      0.000000000000
+                                                                 3.565311431885 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U199/ZN (CLKINV7_12TR40)
+                                                      0.024975299835
+                                                                 3.590286731720 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/net593213 (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U77/A1 (AND2V2_12TR40)
+                                                      0.000000000000
+                                                                 3.590286731720 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U77/Z (AND2V2_12TR40)
+                                                      0.077896356583
+                                                                 3.668183088303 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/n497 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U55/A2 (NAND2CV6_12TR40)
+                                                      0.000000000000
+                                                                 3.668183088303 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U55/ZN (NAND2CV6_12TR40)
+                                                      0.052837133408
+                                                                 3.721020221710 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/net593141 (net)
+                                                8 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U15/A2 (CLKNAND2V6_12TR40)
+                                                      0.000000000000
+                                                                 3.721020221710 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U15/ZN (CLKNAND2V6_12TR40)
+                                                      0.039455890656
+                                                                 3.760476112366 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/n167 (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U5/A1 (NAND2CV6_12TR40)
+                                                      0.000000000000
+                                                                 3.760476112366 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U5/ZN (NAND2CV6_12TR40)
+                                                      0.031308174133
+                                                                 3.791784286499 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/n200 (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U7/A2 (NAND3V6_12TR40)
+                                                      0.000000000000
+                                                                 3.791784286499 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/U7/ZN (NAND3V6_12TR40)
+                                                      0.034805297852
+                                                                 3.826589584351 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_minidec/u_e203_exu_decode/dec_bjp_imm[31] (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_litebpu/U3/A1 (NAND2CV4_12TR40)
+                                                      0.000000000000
+                                                                 3.826589584351 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_litebpu/U3/ZN (NAND2CV4_12TR40)
+                                                      0.031766414642
+                                                                 3.858355998993 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_litebpu/net592671 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_litebpu/U61/B1 (NAND3XXBV8_12TR40)
+                                                      0.000000000000
+                                                                 3.858355998993 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_litebpu/U61/ZN (NAND3XXBV8_12TR40)
+                                                      0.040596485138
+                                                                 3.898952484131 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/u_e203_ifu_litebpu/prdt_taken (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U218/A1 (AO1B2V8_12TR40)
+                                                      0.000000000000
+                                                                 3.898952484131 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U218/Z (AO1B2V8_12TR40)
+                                                      0.080410003662
+                                                                 3.979362487793 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/n33 (net)
+                                                4 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U46/A2 (AOI22BBV2_12TR40)
+                                                      0.000000000000
+                                                                 3.979362487793 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U46/ZN (AOI22BBV2_12TR40)
+                                                      0.096317291260
+                                                                 4.075679779053 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/net593406 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U31/A1 (NAND2CV4_12TR40)
+                                                      0.000000000000
+                                                                 4.075679779053 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U31/ZN (NAND2CV4_12TR40)
+                                                      0.045833587646
+                                                                 4.121513366699 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/pc_add_op1[11] (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U19/A2 (CLKNAND2V0_12TR40)
+                                                      0.000000000000
+                                                                 4.121513366699 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U19/ZN (CLKNAND2V0_12TR40)
+                                                      0.076701164246
+                                                                 4.198214530945 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/net584500 (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U211/I (INV2SR_12TR40)
+                                                      0.000000000000
+                                                                 4.198214530945 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U211/ZN (INV2SR_12TR40)
+                                                      0.049041271210
+                                                                 4.247255802155 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/net584376 (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U101/B (AOI211V4_12TR40)
+                                                      0.000000000000
+                                                                 4.247255802155 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U101/ZN (AOI211V4_12TR40)
+                                                      0.081873416901
+                                                                 4.329129219055 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/net584369 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U99/B1 (OAI21BV4_12TR40)
+                                                      0.000000000000
+                                                                 4.329129219055 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U99/ZN (OAI21BV4_12TR40)
+                                                      0.061522006989
+                                                                 4.390651226044 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/net584368 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U56/B (AOI21V8_12TR40)
+                                                      0.000000000000
+                                                                 4.390651226044 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U56/ZN (AOI21V8_12TR40)
+                                                      0.044012069702
+                                                                 4.434663295746 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/net584365 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U140/A2 (AO1B2V8_12TR40)
+                                                      0.000000000000
+                                                                 4.434663295746 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U140/Z (AO1B2V8_12TR40)
+                                                      0.071160793304
+                                                                 4.505824089050 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/net702123 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U24/A1 (NAND2CV12_12TR40)
+                                                      0.000000000000
+                                                                 4.505824089050 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U24/ZN (NAND2CV12_12TR40)
+                                                      0.033365249634
+                                                                 4.539189338684 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/net584294 (net)
+                                                6 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U114/A1 (AOAI211V8_12TR40)
+                                                      0.000000000000
+                                                                 4.539189338684 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U114/ZN (AOAI211V8_12TR40)
+                                                      0.065516948700
+                                                                 4.604706287384 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/n67 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U102/A1 (XNOR2V4_12TR40)
+                                                      0.000000000000
+                                                                 4.604706287384 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/U102/ZN (XNOR2V4_12TR40)
+                                                      0.060407161713
+                                                                 4.665113449097 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/add_465/SUM[27] (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U198/A1 (AO1B2V8_12TR40)
+                                                      0.000000000000
+                                                                 4.665113449097 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U198/Z (AO1B2V8_12TR40)
+                                                      0.090211868286
+                                                                 4.755325317383 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_req_pc[27] (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U43/A1 (XOR2V6_12TR40)
+                                                      0.000000000000
+                                                                 4.755325317383 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U43/Z (XOR2V6_12TR40)
+                                                      0.049339294434
+                                                                 4.804664611816 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net592641 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U98/A2 (OR2V4RD_12TR40)
+                                                      0.000000000000
+                                                                 4.804664611816 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U98/Z (OR2V4RD_12TR40)
+                                                      0.066521644592
+                                                                 4.871186256409 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/n288 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U25/A6 (OR6V8_12TR40)
+                                                      0.000000000000
+                                                                 4.871186256409 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U25/Z (OR6V8_12TR40)
+                                                      0.077560901642
+                                                                 4.948747158051 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net592634 (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U280/A2 (NAND4BBV12_12TR40)
+                                                      0.000000000000
+                                                                 4.948747158051 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U280/ZN (NAND4BBV12_12TR40)
+                                                      0.083511829376
+                                                                 5.032258987427 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net592585 (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U123/A1 (AND2V16_12TR40)
+                                                      0.000000000000
+                                                                 5.032258987427 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U123/Z (AND2V16_12TR40)
+                                                      0.074461936951
+                                                                 5.106720924377 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net704501 (net)
+                                                7 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U79/S (MUX2NV4_12TR40)
+                                                      0.000000000000
+                                                                 5.106720924377 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U79/ZN (MUX2NV4_12TR40)
+                                                      0.063400745392
+                                                                 5.170121669769 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net592612 (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U77/A1 (XOR2V4_12TR40)
+                                                      0.000000000000
+                                                                 5.170121669769 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U77/Z (XOR2V4_12TR40)
+                                                      0.082106590271
+                                                                 5.252228260040 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net592611 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U78/A3 (AND3V4_12TR40)
+                                                      0.000000000000
+                                                                 5.252228260040 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U78/Z (AND3V4_12TR40)
+                                                      0.081782341003
+                                                                 5.334010601044 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/n352 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U114/I (INV4_12TR40)
+                                                      0.000000000000
+                                                                 5.334010601044 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U114/ZN (INV4_12TR40)
+                                                      0.019804477692
+                                                                 5.353815078735 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net592593 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U144/A2 (NAND4BBV12_12TR40)
+                                                      0.000000000000
+                                                                 5.353815078735 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U144/ZN (NAND4BBV12_12TR40)
+                                                      0.079833507538
+                                                                 5.433648586273 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net538088 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U138/I (CLKINV16_12TR40)
+                                                      0.000000000000
+                                                                 5.433648586273 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U138/ZN (CLKINV16_12TR40)
+                                                      0.023172378540
+                                                                 5.456820964813 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net702714 (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U137/S (MUX2NV8_12TR40)
+                                                      0.000000000000
+                                                                 5.456820964813 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U137/ZN (MUX2NV8_12TR40)
+                                                      0.043788433075
+                                                                 5.500609397888 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/net702697 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U73/A1 (AND2V8RD_12TR40)
+                                                      0.000000000000
+                                                                 5.500609397888 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U73/Z (AND2V8RD_12TR40)
+                                                      0.062042236328
+                                                                 5.562651634216 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/ifu_req_ready (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U224/B1 (OAI2XB1V12_12TR40)
+                                                      0.000000000000
+                                                                 5.562651634216 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U224/ZN (OAI2XB1V12_12TR40)
+                                                      0.036326885223
+                                                                 5.598978519440 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/n15 (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U100/I (INV12_12TR40)
+                                                      0.000000000000
+                                                                 5.598978519440 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/U100/ZN (INV12_12TR40)
+                                                      0.026133060455
+                                                                 5.625111579895 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_req_valid (net)
+                                                3 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U121/A1 (NOR2CV12_12TR40)
+                                                      0.000000000000
+                                                                 5.625111579895 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U121/ZN (NOR2CV12_12TR40)
+                                                      0.023115158081
+                                                                 5.648226737976 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/n281 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U338/A1 (NOR2V12_12TR40)
+                                                      0.000000000000
+                                                                 5.648226737976 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/U338/ZN (NOR2V12_12TR40)
+                                                      0.062429904938
+                                                                 5.710656642914 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ift2icb/ifu2itcm_icb_cmd_valid (net)
+                                               13 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/U37/A2 (NAND2CV2_12TR40)
+                                                      0.000000000000
+                                                                 5.710656642914 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/U37/ZN (NAND2CV2_12TR40)
+                                                      0.062016010284
+                                                                 5.772672653198 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/n27 (net)
+                                                1 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/U47/I0 (MUX2NV6_12TR40)
+                                                      0.000000000000
+                                                                 5.772672653198 f
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/U47/ZN (MUX2NV6_12TR40)
+                                                      0.060154914856
+                                                                 5.832827568054 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/sram_icb_cmd_addr[14] (net)
+                                                2 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/u_sram_icb_ctrl/u_byp_icb_cmd_buf/U127/I0 (MUX2V12_12TR40)
+                                                      0.000000000000
+                                                                 5.832827568054 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/u_sram_icb_ctrl/u_byp_icb_cmd_buf/U127/Z (MUX2V12_12TR40)
+                                                      0.096009254456
+                                                                 5.928836822510 r
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_itcm_ctrl/u_sram_icb_ctrl/u_byp_icb_cmd_buf/o_dat[88] (net)
+                                                4 
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/u_RAMSP4KX64_0/A[11] (RAMSP4KX64)
+                                                      0.000000000000
+                                                                 5.928836822510 r
+  data arrival time                                              5.928836822510
+
+  clock core_clk (rise edge)                          6.666666507721
+                                                                 6.666666507721
+  clock network delay (ideal)                         0.000000000000
+                                                                 6.666666507721
+  clock reconvergence pessimism                       0.000000000000
+                                                                 6.666666507721
+  clock uncertainty                                   -0.100000001490
+                                                                 6.566666603088
+  u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_sram_wrap_32KX64/u_RAMSP4KX64_0/CLK (RAMSP4KX64)
+                                                                 6.566666603088 r
+  library setup time                                  -0.637539982796
+                                                                 5.929126739502
+  data required time                                             5.929126739502
+  ------------------------------------------------------------------------------
+  data required time                                             5.929126739502
+  data arrival time                                              -5.928836822510
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    0.000289700925
