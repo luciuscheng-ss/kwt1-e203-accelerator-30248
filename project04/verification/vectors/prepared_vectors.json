@@ -1,0 +1,161 @@
+{
+  "scope": "Fixed validation-list entry0, all12 layers; frozen format unchanged.\nGold GEMM is validation-only, never a hardware/runtime converter input.\n",
+  "data_split": "validation",
+  "sample_selection": "index0 fixed before any vector performance measurements; no sample selection for fast rate",
+  "validation_sample": {
+    "label": 1,
+    "file": "three/7195ffa6_nohash_2.wav",
+    "silence": false
+  },
+  "numeric_freeze_sha256": "f0d58263c179a89d164cffbf3f866db68d52f8c27ead48add034c49896becef2",
+  "testing_accessed": false,
+  "numeric_config_changed": false,
+  "actual_RTL_verified": false,
+  "official_score": null,
+  "case_info": [
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 0,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 7046
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 1,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6920
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 2,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6914
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 3,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6936
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 4,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6895
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 5,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6935
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 6,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6847
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 7,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6786
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 8,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6878
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 9,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 6914
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 10,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 7035
+    },
+    {
+      "kind": "validation_fixed_entry0",
+      "layer": 11,
+      "sample_index": 0,
+      "source_words": 8168,
+      "output_words": 7110
+    },
+    {
+      "kind": "zero_X_maximum_signed_bias",
+      "source_words": 8168,
+      "output_words": 304
+    },
+    {
+      "kind": "zero_W_exact_Winograd_cancellation",
+      "source_words": 8168,
+      "output_words": 208
+    }
+  ],
+  "source_inputs_sha256": {
+    "artifacts/reference/validation/samples.json": "f42ee70217f38ba0fb1eb5ca4cba39e190363ff278f1701836a8f37ed6098e4f",
+    "artifacts/reference/weights.npz": "1feec08cf76c48fabe7508d969d3494adbbc5865e6e92bdd3aae29b82b7fe985",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_00.json": "aa68adfc2c61fbf7bc9f10ba918bdff12c4c651208dfcaed921dff755d3f6d64",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_00.npz": "cb0b7ea950929310f0e532e1272da846c101167ee73dad11f9c3f3d5b7c005bd",
+    "artifacts/reference/validation/layer_00_input.npy": "575ea1ea64339e7968c183b7bc15895e86df98d17b2cc9d93b9ee81b60c8496a",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_01.json": "2b965267301bb72223efa872cfe0cea1342219a8ad5b64d2126a045b678888df",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_01.npz": "9b2269eedf5c02931626a498c91cecd7894534f7b2d224edba2a376a259757cb",
+    "artifacts/reference/validation/layer_01_input.npy": "f42795142c8b7487d2c3897d82b83baf04ae18a86fac26df9f461ba006e32e0d",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_02.json": "f159301e29d92cfba8b1feaf79fa696f0d515c5fc9fe78e7c931440fb2b66cae",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_02.npz": "7f9b71acd986610d339e931ddb3f5610c8cd2f012e264394f23e8842d6260fed",
+    "artifacts/reference/validation/layer_02_input.npy": "e6b413ec12901b81828c7df2fb994ce676b9c67909d4a0dd15ffd1a8adc9b1e1",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_03.json": "e59e9f51b0c44423c613b671c3734c7cd9c4f6a2e358f77062cdd186f7862c1d",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_03.npz": "50a7cdb3833b103134c7434d4ac2c9ade88afd4db6ec4b477a91b3896686cde0",
+    "artifacts/reference/validation/layer_03_input.npy": "f181fb8f2a463b23d99f90d187a5f0c39309310996b0e89530ab8f6601510662",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_04.json": "8b0513910e3a1ecd49b51072edb16d153b3d2dc0712dc89b3374f9fe20b6a7b8",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_04.npz": "967c3003205445f9ebba2fd6a0a546a2669334f2cfff8970084f2712dbf9874a",
+    "artifacts/reference/validation/layer_04_input.npy": "bedc28f781c29d76ef984264663331b1575e19c42f60e1b39c68cafe0ae294ba",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_05.json": "11d5e5c527fe21af59a1963ec7a828afe12af5850c8d471c2b64846b6f9f9189",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_05.npz": "237afa4c453b7abbf08f1e88035b8b89e9f3d447c05e39fe01f3246894fba60f",
+    "artifacts/reference/validation/layer_05_input.npy": "e6c49fdc6d9069e7ef767e3bfc7762f4c680c70cb7e252bf1cc0d36c4ee9e3c0",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_06.json": "28a0457936f26a4f2d5c478db9a81a570cff54ecb69c68ee05ad070416d3333c",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_06.npz": "9c1d60e7694a1d3a8a38c37f121910c9be5a2c844e014d9ba371fd9cbf5ed571",
+    "artifacts/reference/validation/layer_06_input.npy": "c151abcbd2e739a0208aaff3ad12b0bad28ee960e0b47fb5fcb4323e11d3f878",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_07.json": "d4ad0aca12e24f770109789f60416bc6e543edd017961426a5dad2eb43e459ce",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_07.npz": "4a1d863663d117ccdd2359da4dcd4a26f9608d4a51464f464991403af755dbc7",
+    "artifacts/reference/validation/layer_07_input.npy": "d968e5eab2d44a5b9326c64e033efe25628c31306a0249f934a94a1c44146008",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_08.json": "aa2c6d01f4d336cf5c5435bc69acbc82fdc2f334f7a6fd88d31fe5e0489b73a1",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_08.npz": "e3ba5ab786ab4b1dcc8ecc125b33fd08ac608d471e7d0b4954a00098259ebfe0",
+    "artifacts/reference/validation/layer_08_input.npy": "17ca6f97f24bd605f4111ce884064afdfbb81bbabd665ceb4b520db9db9610da",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_09.json": "ee6c5d4f4d4520dfbe89c8e653adc89e3c596b642950e7ea46bb65b6a68813e7",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_09.npz": "11663a0222cf82fba379a657802e756f43295d2c3250055a315e07016f6d039b",
+    "artifacts/reference/validation/layer_09_input.npy": "2e61c927138c7f2eee08c3d7d6ff582b0b2991734cf4a3df9f026cccccb94d20",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_10.json": "14656a56f39f0510d2c59b0b793fe71c519713cf4f7c899ea8eb75d2da4d14d4",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_10.npz": "580073e805c60441a44315ebab7c90ecd860e9e8c4c6035e4f731d02c76ae0d3",
+    "artifacts/reference/validation/layer_10_input.npy": "84fc8aff73b178ba2bb6c406a49a90b2a0c2c9880d3c5fe420a5eef02616b28b",
+    "experiments/joint_search_8000_20261111/narrow11/training_o13/x11w11_layer_11.json": "1bb8616a1cfc99df9f9c8ae84b0f45acd10cb468f775d3cbddc75a213c5d4eb3",
+    "experiments/joint_search_8000_20261111/dynamic12/w11_layer_11.npz": "a1eff42d47b95b91ca9e514cb3d78cb39d77141cf76717e7b22c3e6992bb9d15",
+    "artifacts/reference/validation/layer_11_input.npy": "84f9699e03e891c55e9cdf98809095f62463068d21368c1991ce1ebc200643ec"
+  },
+  "vector_generator_sha256": "d7aba0b3ba953d6ef0255d2b8f6686475bd2e74cb7ad6927f6299fd7b51432d6",
+  "synthetic_parent_source_sha256": "5843bd4f0bcf30db812ca2c96ffd339720a397ad8e4e08cf3c0947245f7126bf",
+  "vectors_sha256": {
+    "source.hex": "61a0f14d00c34544ef3b7e510bcd3b46e36192f7e5d074c068db25fe8bd99f75",
+    "raw.hex": "de147b3c398a8dddf1ee8a8d25487cc88dac4e46a88b62da9fbce76ae50a99c4",
+    "codes.hex": "6bced6cfec23556cc70fc46cd70ac109781231d4eefc1f2f6ad75afa8e0fd352",
+    "packed.hex": "ebad9daa515c37497dd2a08153d8c9a3de3b0e4ad1375a992f66448f61fee533",
+    "word_counts.hex": "60cb09229efef1bc62a033c2f4ea074ba1e81473ef78a24ce69ad0f89871cf60",
+    "dual_params.vh": "3ec312c5f031eab462958a9e75787a33a9f8f68c0c201ad9d985a66ab5ebfe5c"
+  }
+}

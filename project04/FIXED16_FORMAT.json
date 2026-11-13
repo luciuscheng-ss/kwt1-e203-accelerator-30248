@@ -1,0 +1,19 @@
+{
+  "format_id": "fixed16_rowmajor_v1",
+  "CSR_format_magic": "0x0b0b0d16",
+  "shape": [
+    99,
+    256
+  ],
+  "numeric_codes": "unchanged signedO13[-4095,4095]",
+  "storage": "two signed16 slots per32bitword,little endian,row-major",
+  "address_formula": "result_base+2*(256*row+column)",
+  "word_formula": "uint16(q[row,2*k])|(uint16(q[row,2*k+1])<<16)",
+  "extension": "sign extend14bit quant output to16bits; no further rounding/truncation",
+  "output_words": 12672,
+  "output_bytes": 50688,
+  "decode": "read signed16 matrix then apply existing per-columnM/R and sx,sw scales",
+  "compression": false,
+  "stream_mode_supported": false,
+  "numeric_freeze_changed": false
+}

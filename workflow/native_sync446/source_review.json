@@ -1,0 +1,9 @@
+{
+  "e203_subsys_plic.v": {
+    "u_wdg_irq_sync": "b4379c0a6be8bc5c496e3462973ee7e537ae79096730f0aaf007c5e6261f6f74",
+    "u_rtc_irq_sync": "8142b81a96cea1c06266e9d2f881143fe698f3e98c84f926cc8a404fcfe8475c"
+  },
+  "e203_subsys_clint.v": {
+    "u_aon_rtctoggle_sync": "b2e90c6dea744e0dba43127c33204fe04b302a2c1a9f2641a6db18a2b319526f"
+  }
+}

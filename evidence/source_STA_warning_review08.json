@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-13",
+  "scope": "Source synthesis and current physical-map STA only; fresh power warnings reviewed after actual jobs complete",
+  "mapped_sha256": "d450453c3757474b56e5d1736357a786d73da36102be05522b9dd450b53947eb",
+  "source_manifest_sha256": "3cd1ff2bf37de0745efc9998461d4cbd4a1b27954fe440d88d843c37410ccbc9",
+  "source_and_STA_review_complete": true,
+  "all_current_power_warnings_reviewed": false,
+  "warning_review": {
+    "UID-101": "2158area-lessobjectsareexactlogic_0/logic_1virtualconstants,0librarymatches;ALL151092realphysicalleafobjectspositiveareaandmatchedlibraries. No missingphysicalcellarea excluded.",
+    "VO-11/VO-4": "Verilogwriteraddsexplicitunconnectednetnamesandassign/tranconnections;actualmappedVCSfull16PASS,allusedraw/quant/outputmatrixandCPUtransactionschecked;noGTECH/unknownrealcellrefs.",
+    "TIM-134": "DCoptimizationhighfanoutloadestimate;finalSTAusesactuallinkedpinloadsandunchangeddeclaredpreCTSinterconnect,allactiveoutputmaximumloadsvalid.",
+    "TIM-141": "Originalplatformgatedclockinferencewarningretained;actualfinalPTfunctionalclockcoverageandmaxendpointcoveragecomplete,allrequiredrealclocksandmacroportactivityvalidated.",
+    "TIM-128/TIM-179/TIM-276": "OriginalclockMUX/path-groupoptimization/largeasynchronousperiodratio diagnostics;actualfinalvalidclockconstraints+explicitRXdelaybounds+sourceCDC+currentcontext/syncverification,not broadfalsepathcuts.",
+    "ELAB/OPT/VER": "Originalprovided-sourcecasestyle/signedassignment/optimizationdiagnostics;alloriginalsourcechangesexplicitlyrecorded;current64term33bitrawand13bitquantRTL/mapchecksbitexact.",
+    "ATTR-3": "Diagnosticclockattributequeryonspecifiedmacro/latchpinsunsupported;actualcheck_timingfunctionalclockcoverage0holesandmaxendpoints0unconstrained.",
+    "SDF-036": "Characterizednegativepairedsetup/holdsumwarnsduringauxiliarySDFserializationonly;STAusesactualprovidedDB;functionalnetlistregressiondoesnotclaimSDFtimedsimulation.",
+    "PTE-003/PTE-052": "All43219actualdisabledarcsclassified,0unknown/0loopcuts;largeHF/LFratiohandledactualguardedprotocol+asynchronousdataboundsandactualthree2FFchains."
+  },
+  "disabled_flags_by_ASCII": {
+    "112": 13964,
+    "67": 28441,
+    "99": 613,
+    "100": 201
+  },
+  "electrical_review": {
+    "max_capacitance_active_violations": 0,
+    "min_capacitance_active_violations": 0,
+    "unloaded_min_characterization_diagnostics_retained": 1781,
+    "physical_terminal_positive_controls": 8,
+    "other_constraint_violated_markers": 0,
+    "max_load_fix": "90same-function/pinstrongerdrivers;newmapfunction/STA/areaandfreshpowerafterfix"
+  },
+  "evidence": {
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_warnings635_receipt/result.json": "5f0013fa80116241a8b96b7548b1b437d475d5e196ee7abe85085319e97ee262",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_warningexamples637_receipt/result.json": "127750a740aa1b06c9a35ad9bf945419c114471cdafa572ba8745c6a5d178e0d",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_constraintsourcereview639_receipt_retry1/result.json": "6c09878be6623e54bae0ee092ccf903a72cf5b16250bb6aaee09eb137815e6a1",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_leafstatus632_receipt/result.json": "b052fbd31f89efa87bcce630c1aed103f2f645578842e990895584cc5311391f",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_recoverystatus638_receipt/result.json": "fcf5d7a2ebe5ed6138f6b203beddde92b741652ca49b56ecd1aa6ed6fb89d34a"
+  }
+}

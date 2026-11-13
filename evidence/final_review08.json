@@ -1,0 +1,26 @@
+{
+  "pass": true,
+  "mapped_sha256": "d450453c3757474b56e5d1736357a786d73da36102be05522b9dd450b53947eb",
+  "all_current_warnings_reviewed": true,
+  "source_and_STA_warning_review": {
+    "path": "source_STA_warning_review08.json",
+    "sha256": "af8bb083194ca3f2fac1a2217bcd78fd2dd0072715884461c32770492b230c47"
+  },
+  "actual_server_engineering_review": "/home/2026contest/server6/s6_19usr/kwt_systembus_joint_20261111_01/conservative516/engineering_review08.json",
+  "current_power_review": "Actual12newPTjobs;Wattunits/positiveinternal+leakmacro/blackbox0;100percentdirectactivity+probability;emptyhierarchies0realphysicalleafchildren;onlyknownPTE003/PTE052/PWR278codes",
+  "power_group_review": "Registerpowerpositive0.6155mW;clock_networkincludesregisterclockpininternalpower(flagI),memory9.423mW,combinational2.533mW;genericsequential0doesnotomittheactualregistergroup",
+  "new_unpack_warning_review": "makeCLOCK_SKEWfromserverfiletimesdoesnotalterHDLsimclock;newbuild/csrcwasabsentbeforecompile,compiledsourcehashesverified,compileexit0andALL16mapped+16RTL/12CLIcompleteexact. NoOSclock/networkchangeorwarning-suppressionpassused.",
+  "packaging_repair_review": "Onlyincorrectprepackagepathandpre1980ZIPmetadatafixed;allsource/map/PPAunchanged. Originalfailurespreserved. Finalprivate15CRC/allentrySHAreadbackandfreshunpack32+12complete.",
+  "same_frozen_implementation": true,
+  "official_sources_reviewed": {
+    "path": "official_snapshot_identity06.json",
+    "sha256": "23a3706a835ee1ab96ac903f5a022e25864dae8f4e07d24c7f102959e40ce23d"
+  },
+  "all_runtime_exceptions_audited": true,
+  "report_and_engineering_gate_must_be_closed_after_visual_QA": true,
+  "evidence": {
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_finalfacts667_receipt/result.json": "c82871c83efaea42292c8855ba279ade3df31d8dd802a7c8354aa68fec87864c",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_reproductionprogress666_receipt/result.json": "21a8d08d8f301a48a145480e2710c7aa3aa01f6cbf44f8cb6751adaddac1c912",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_collectsupport663_receipt/result.json": "313d0396b3197fce23f23d5af7dd90f93df147309ed8becaa25468cde7aa7e3c"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "ConservativeoriginalSystemBusconfiguration1MODE0fixed16,unchangedX11W11O13",
+  "own": [
+    "acceleratorRTLunderhardware/rtl",
+    "DMAinternalbuffersandtwoorderedarbitersbeforeoriginalSystemBus",
+    "shared512KiBsingle32bitcontrollerandCSRintegration",
+    "frozennumericconversionandlosslessSOURCEbitpacking;fixed16uncompressedOUTPUTmatrix",
+    "248-byteCPUconfiguration/WFI/START/status/readbackfirmware",
+    "verificationsoftwareandprotocolobservers"
+  ],
+  "third_party": [
+    {
+      "name": "Provided2025 E203/hbirdv2 SoC package",
+      "role": "Original CPU/bus/TCM/peripherals/AON and custom macro wrappers",
+      "platform_package": "SOC_RTL_2025/e203_hbirdv2-master_1013_update_sim.zip",
+      "profile_sha256": "2bf19e69bf00be9838ddb77fd977bdc93d3b91240f545b7879d6d68d80dd7dd7",
+      "public_reference_url": "https://github.com/riscv-mcu/e203_hbirdv2",
+      "public_reference_commit": "9f3e34f337f5d0a1236a285871ffa2032491617a",
+      "note": "Provided custom SMIC wrappers/config are authoritative; not replaced by public upstream; exact source hashes in resource profile."
+    },
+    {
+      "name": "ARM-software keyword-transformer KWT1",
+      "url": "https://github.com/ARM-software/keyword-transformer/tree/237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+      "role": "Specified unmodified inference model/checkpoint, preprocessing, train/validation partition and12-layer FFN inputs",
+      "license": "Original Apache2.0 statements retained in original project; source/tensor evidence in numeric review."
+    },
+    {
+      "name": "Speech Commands v0.02",
+      "url": "https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz",
+      "archive_sha256": "af14739ee7dc311471de98f5f9d2c9191b18aedfe957f4a6ff791c709868ff58",
+      "role": "Specified dataset; training only for numeric config, validation for frozen checks, testing not used for tuning."
+    },
+    {
+      "name": "Provided SMIC SRAM/ROM and standard cell libraries",
+      "role": "Actual simulation models, mapping and STA/power/area library assets, not autonomous RTL",
+      "macro_types": [
+        "RAMSP8KX32",
+        "RAMSP4KX64",
+        "RAMSP1024X16",
+        "RAMSP128X16",
+        "ROM1KX32"
+      ],
+      "location": "Original files retained server-only; exact final DB/model hashes in server result records; no redistributed private assets."
+    }
+  ],
+  "algebraic_method": "Pairwise inner-product identity implemented in own RTL; hardware computes Alpha terms; no third-party Winograd RTL copied. Integer-rounding error compensation is original project Python implementation; original floating checkpoint is not modified. This is not an organizer-specific approval of a named quantization algorithm.",
+  "loading_adapter": "TeamTBatquiescentoriginalCPUMEMinterface;all8168sourcewordsandresponsestraverseoriginalSystemBus;nodownstreamhandshakeoverride"
+}

@@ -1,0 +1,24 @@
+{
+  "source_quote": "红线是我自己写的，不是官方要求，五千多我认为暂时足够了",
+  "updated_utc": "2026-11-12T08:18:40.248162+00:00",
+  "authority": "user_team_preference",
+  "selected_mode": 0,
+  "accepted_cold_tasks_s": 5467.5017769380775,
+  "accepted_driver_return_tasks_s": 5457.47264441837,
+  "hard_min_tasks_s": null,
+  "official_min_6000_exists": false,
+  "numeric_RTL_Firmware_clocks_unchanged": true,
+  "mode1_energy_not_reused_for_mode0": true,
+  "frozen_priority_path": "compliance/current_completion_priority_20261112_accept5k.json",
+  "frozen_priority_sha256": "10e670653332d3bc646115850bbc91fc072f3bb5f71cd2b60deb3c50c4e95257",
+  "old_preference_snapshots": {
+    "compliance/current_team_preferences.json": {
+      "snapshot": "compliance/preference_history/20261112_accept_preload5k/current_team_preferences.json",
+      "sha256": "fa9ce31ff398643ec42dcf2b978700fe7028d0554a18c22cd0b1ac352653247f"
+    },
+    "compliance/current_completion_priority_20261111.json": {
+      "snapshot": "compliance/preference_history/20261112_accept_preload5k/current_completion_priority_20261111.json",
+      "sha256": "e4e47c796984530378c11b7f5364acaacd0d4277d50c9f25d597bc80862b732d"
+    }
+  }
+}

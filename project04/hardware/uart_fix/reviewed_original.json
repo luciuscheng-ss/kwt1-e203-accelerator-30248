@@ -1,0 +1,11 @@
+{
+  "schema": "kwt-uart-reviewed-sources-v1",
+  "official_profile_sha256": "cb2a2037ba7b1a675c89cc468244b30968deea3c80801bcff9c713d641b67106",
+  "sources_sha256": {
+    "rtl/e203/perips/apb_uart/apb_uart.v": "bd31f4a19b8e81ba2c8ce02b3244ada38cf211445d8ec96151d55f7e946ecadc",
+    "rtl/e203/perips/apb_uart/io_generic_fifo.v": "106ee607c8e48cee322a61295b52cc275c0fa540ec6d78547723cca5e9dfd0b1",
+    "rtl/e203/perips/apb_uart/uart_interrupt.v": "75298c2bfb4921cee757641927d55500a54f8604d808f59717834e8507045e60",
+    "rtl/e203/perips/apb_uart/uart_rx.v": "3eaff563777043772c66d1bf504ff5ddcd5723689b53a50444bb90aec618c39a",
+    "rtl/e203/perips/apb_uart/uart_tx.v": "d21960c4faffb9bbd0687db02d119ac1e95b6f495b5b49f5efcaed18667dbe83"
+  }
+}

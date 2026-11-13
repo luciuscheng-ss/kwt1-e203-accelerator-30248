@@ -1,0 +1,182 @@
+{
+  "pass": true,
+  "cases": [
+    {
+      "case": 0,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 1,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 2,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 3,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 4,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 5,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 6,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 7,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 8,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 9,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 10,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 11,
+      "full_values_decoded": 25344,
+      "source_identity_verified": true,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 12,
+      "full_values_decoded": 25344,
+      "source_identity_verified": false,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    },
+    {
+      "case": 13,
+      "full_values_decoded": 25344,
+      "source_identity_verified": false,
+      "CLI_and_model_equal": true,
+      "malformed_inputs_rejected": [
+        "truncated",
+        "extra",
+        "invalid_sign_extension",
+        "negative_word"
+      ]
+    }
+  ],
+  "all_values": 354816,
+  "all12_encoded_sources_unchanged": true,
+  "freeze_sha256": "f0d58263c179a89d164cffbf3f866db68d52f8c27ead48add034c49896becef2",
+  "code_sha256": {
+    "experiments/shared_bus_write_allocate_20261111/decode_task_native51.py": "213db3894c93acb9a8bc9b5da880cf20f2dd0bd90ff266a64ee5ff8e38a312f1",
+    "experiments/shared_bus_write_allocate_20261111/encode_task_native51.py": "79ce8cb00c74cc4423c33aeee7aab3483cae2b058818fb9f779374d9ec0b847d",
+    "software/fixed16_matrix.py": "c77268e7222c44eb75cab94e34e13bb62c9961559c5e8a9acfa5ce95cb787ab0"
+  },
+  "script_sha256": "00bfb569ecae12cc14bb395b25bbde0b896dfbaf2bce5a92ea09fe6b15eb48cd"
+}

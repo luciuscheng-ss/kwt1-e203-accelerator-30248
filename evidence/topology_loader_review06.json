@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-13",
+  "context": {
+    "group": "undergraduate",
+    "phase": "preliminary"
+  },
+  "review_scope": "ActualfrozenRTLroute/originalfabricparameters/loaderhandshake;finalphysicalmapPPAjoinedseparatelyafterrepair",
+  "source_manifest_sha256": "3cd1ff2bf37de0745efc9998461d4cbd4a1b27954fe440d88d843c37410ccbc9",
+  "official_source": {
+    "path": "compliance/sources/赛题问题答复_收到于20261112.pdf",
+    "sha256": "706a5d60765f577a5c56c3cbd389da652badbe7bde8ffa574309aef7b6516e30"
+  },
+  "official_questions": {
+    "12": {
+      "pdf_page": 3,
+      "requirement": "32bitoriginalinterface/realhandshake;internalpipelinewithinsupportedprotocol"
+    },
+    "15": {
+      "pdf_page": 4,
+      "requirement": "Overlapwithoriginalinterfaceconcurrency,nobypass"
+    },
+    "16": {
+      "pdf_page": 4,
+      "requirement": "DMAthroughoriginalSystemBus,nobankparallelTBbypass"
+    },
+    "18": {
+      "pdf_page": 4,
+      "requirement": "OutputthroughoriginalsharedSRAMroute,noindependentwriteport"
+    },
+    "2": {
+      "pdf_page": 1,
+      "requirement": "Teamimplementsloader;countactualtransactions/waits/CPUscheduling"
+    },
+    "11": {
+      "pdf_page": 3,
+      "requirement": "Complete99x256numericoutputstoredwithoutadditionalcompression"
+    },
+    "13": {
+      "pdf_page": 3,
+      "requirement": "NoDMA/acceleratordirectTCMinsteadofsharedSRAM"
+    }
+  },
+  "actual_route": [
+    "DMAread/writerequestarbiter",
+    "CPU/DMArequestarbiter",
+    "e203_subsys_mems.u_sirv_mem_fab(original32bitSystemBus)",
+    "SysMemCSR/memoryselection",
+    "single32bitsharedSRAMcontroller",
+    "16banks512KiB(onebankperacceptedrequest)"
+  ],
+  "original_and_current_parameters": {
+    "SPLT_FIFO_OUTS_NUM": {
+      "original": 1,
+      "current": 1,
+      "historical": 2
+    },
+    "SPLT_FIFO_CUT_READY": {
+      "original": 1,
+      "current": 1
+    },
+    "ICB_FIFO_DP": {
+      "original": 2,
+      "current": 2
+    },
+    "ICB_FIFO_CUT_READY": {
+      "original": 1,
+      "current": 1
+    }
+  },
+  "fabric_defparams": {
+    "actual_compiled_count": 0,
+    "removed": [
+      "SPLT_FIFO_OUTS_NUM=2",
+      "buffer.OUTS_CNT_W=1"
+    ],
+    "outside_build_history": "2unusedwrapperswith3fabricdefparamsarchived",
+    "OUTS_CNT_W_reason": "Unconnectedactivitycounterwidth,redundant,noarbitrationgrantfunction"
+  },
+  "team_choice": "Preservealloriginalfabricconcurrencyparameters;notanofficialexplicitbanonmultipleoutstanding",
+  "own_queues": {
+    "request_buffer_DEPTH": 8,
+    "DMA_rw_arbiter_TAGS": 8,
+    "CPU_DMA_arbiter_TAGS": 8,
+    "ordering": "OwnertagFIFOadvancesonlyonrealdownstreamcommandreadyandresponsevalid/ready;arbiterslockselectionunderbackpressure"
+  },
+  "loader": {
+    "takeover": "CPUWFI+BIUidle+allpreviousMEMtransactionsdrained",
+    "stimulus": "6CPU_MEMmasterfields/response-ready;thenreal8168wordcommandsandACKs;noSRAMslavepinorreadyoverride",
+    "release": "All8168responsesdrainedthenrelease6fields,originalIRQwakeCPU",
+    "start": "CPUconfiguresMODE0andstartsDMAafterpreload",
+    "tasks_data_TCM_words": 0,
+    "known_fixed_metadata": "Staticoutputlength12672;notprecomputedanswers"
+  },
+  "output": {
+    "values": 25344,
+    "signed_container_bits": 16,
+    "numeric_range": [
+      -4095,
+      4095
+    ],
+    "sign_extension": "Signed14quantizerinterfaceextendedto16;noextraroundortruncation",
+    "layout": "rowmajor;address=0xA0040000+2*(256*row+column);twoadjacentcolumnslittleendian/32bitword",
+    "words": 12672,
+    "bytes": 50688,
+    "last_byte": "0xA004C5FF"
+  },
+  "mode1": "RejectedbyCSR;noconsumptionofloadingcachecopy",
+  "posttask_oracle": "Read-onlymemorypinoracleafterCPUreturn/VCDoff/idle;notpartofloading/computing/writeback",
+  "source_review_files": {
+    "experiments/conservative_bus1_mode0_raw16_20261113/project04/hardware/integration/prepare_native_overlay.py": "e9811f2ad23212a3a92dee62cd7e23400cdb5e83baf9cb2089ddb9d4a40a8ea0",
+    "experiments/conservative_bus1_mode0_raw16_20261113/project04/hardware/rtl/shared_arbiter.sv": "51cd154695286a9616af9d386daca3388394eb80c1ad616a160c0917e33e3e2d",
+    "experiments/conservative_bus1_mode0_raw16_20261113/project04/hardware/rtl/fixed_matrix_writer.sv": "dafc4b07d7b8fef72623e776c5880870906e0f21f94b297354ed12ea30b0a315"
+  },
+  "evidence": {
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_install556_receipt/result.json": "e8701cd26783ca9e437e2c43a083ac305349edc610b671b85a96e11634f31b11",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_defparams560_receipt/result.json": "debce4262036ff3efd63a803558ce9ac83d3daec62d20996bed204fb7db57932",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_rtlmetrics566_receipt/result.json": "301efe2f621b18859c708f6aa77d338f3285cba68c1f3c7ba3c78bb194496049",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_bound562_receipt/result.json": "3204ab2bed7aeffd4e5426842a3263c0d91cb2a3e1d57241e50dfaab7e1c643b",
+    "experiments/shared_bus_write_allocate_20261111/results/bus1_recoverystatus608_receipt/result.json": "8f5bb4c486853d8fc08f614f0b73b662481a4e5452ef96fae7eb19f48e344fce"
+  }
+}

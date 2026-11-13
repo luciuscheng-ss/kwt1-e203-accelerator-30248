@@ -1,0 +1,7 @@
+{
+  "cold_sram_audit.cpp": "22b51b434f8048fee62a88100055225c30dbc618255122f008b2e66be402de44",
+  "reviewed_module_logic.json": "b9fb2a5b17bef9b6e1954a80486614ac117426c1572fb11b1905af1ce1edda4c",
+  "run_context.py": "75f16de445ac98ec36d32d21eca60ff7b832845d2a2ba87319ba63411021ed55",
+  "test_checker.py": "f9e917da25d3bd8d51c3a2bdb138a0bd54bc04a2ac95062402191e7ea437e232",
+  "test_ranges.py": "68a65ad55c49a094630f0cac224cae2fcc8b8735429ad4b344ea755fe3c7832d"
+}

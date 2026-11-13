@@ -1,0 +1,74 @@
+{
+  "schema": "kwt-fixed16-SystemBus-format-v2",
+  "group": "undergraduate",
+  "mandatory_operation": "Y[99,256] = X[99,64] * W[64,256] + bias[256]; first FFN linear only",
+  "numeric_freeze": "experiments/joint_search_8000_20261111/narrow11/freeze_X11W11O13.json",
+  "numeric_freeze_sha256": "f0d58263c179a89d164cffbf3f866db68d52f8c27ead48add034c49896becef2",
+  "source_codes": {
+    "X": "signed11, -1023..1023",
+    "W": "signed11, -1023..1023",
+    "bias": "signed32",
+    "M": "unsigned4,1..15",
+    "R": "unsigned6,0..38"
+  },
+  "source_words32": 8168,
+  "source_layout": [
+    "16 column groups,16 columns each; each group starts16 signed32 bias words",
+    "then16 M/R records: M in low4, R in next6; bit-packed little-bit order into5 words",
+    "then32 feature pairs; each pair contains16 ascending columns with2 signed11 weights each,352 bits per feature pair; decoder consumes88-bit4-column stripes;352 words per group with no stripe padding",
+    "only group0 additionally includes all X:20 tiles of5 rows padded to100; each tile's64 features contain5 ascending rows signed11,55 bits per feature;2200 words total; padded row99 zero"
+  ],
+  "source_word_breakdown": {
+    "bias": 256,
+    "M_R": 80,
+    "W": 5632,
+    "X": 2200
+  },
+  "hardware_math": {
+    "raw": "signed33 exact integer dot plus bias, all AlphaX/AlphaW terms computed by RTL",
+    "quantization": "sign(raw) * min(4095, (abs(raw)*M + (R>0 ? 2^(R-1) :0)) >> R)",
+    "rounding": "ties away from zero",
+    "output_sign_container": "quantizer14bits,signextendedtosigned16insharedSRAM;numericrange[-4095,4095]",
+    "decode": "code * input_scale * per-column weight_scale * 2^R / M",
+    "software_converter": "Only frozen input/weight/bias quantization and Cauchy norm output-format metadata. No GEMM or Alpha hardware-result substitution."
+  },
+  "output_transport": {
+    "shape": [
+      99,
+      256
+    ],
+    "storage": "signed16fixedcontainers,row-major,twoelementsper32bitword,little-endian",
+    "output_words": 12672,
+    "output_bytes": 50688,
+    "address_formula": "base+2*(256*row+col)",
+    "sign_extension": "signextend14bitquantizeroutputto16;unchangedO13range[-4095,4095]",
+    "compression": false,
+    "flat_stream_decoder": "decode_task_native51.py validates12672words,signextension,range,shape,finiteoutputandscales",
+    "actual_result_words": "CPUverifiesactualCSRcount12672;matrixdimensionsareformatconstants,notanswers"
+  },
+  "SystemBus": {
+    "width": 32,
+    "shared_range": "0xA0000000..0xA007FFFF",
+    "shared_bytes": 524288,
+    "CSR": "0xA0080000",
+    "default_source": "0xA0000000",
+    "default_result": "0xA0040000",
+    "accelerator_or_DMA_TCM_data_port": false
+  },
+  "modes": {
+    "0": "ordinarypreloadthroughoriginalSystemBus,thenCPUstartsDMAreadsfromsharedSRAM",
+    "other": "rejectedbyCSR;noallocation-copyconsumerpath"
+  },
+  "qualification": "ConservativeMODE0fixed16;currentphysicalresultsboundbyfinalimplementationjoin",
+  "software_numeric_reference": "numeric_reference_native51.py; reference outputs are verification artifacts and never enter CPU task payload",
+  "software_model_verification": "results/numeric_reference74.json",
+  "parameter_converter": "encode_task_native51.py --input X.npy --layer N --source-hex source.hex --decode-metadata scales.json; produces only8168 source words plus scales, no answers or output lengths",
+  "cpu236": {
+    "program_bytes": 248,
+    "ITCM_words64": 31,
+    "TCM_task_payload_words": 0,
+    "task_setup": "CPU configures source/destination/mode, architecturalWFI; originalCPU publicMEM frontdoor testbench loads all8168 words into actualsharedSRAM; drainallresponses; existingIRQ wakesCPU; CPU START, waitstatus, actualcount/lastwordreadback. SelectedMODE0.",
+    "internal_CPU_response_force_or_mask": false,
+    "expected_output_in_CPU_program_or_task_memory": false
+  }
+}

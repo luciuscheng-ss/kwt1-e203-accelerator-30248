@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-13",
+  "context": {
+    "group": "undergraduate",
+    "phase": "preliminary"
+  },
+  "scope": "Numerical/model-source clauses only; no PPA or entire release acceptance inferred",
+  "clause_review": {
+    "MOD01": "指南p5：新运行model_origin04确认指定237e4097提交和162个checkpoint张量；24项FFN W/B与缓存逐位一致。当前project04原始W/B和冻结权重数据与来源审阅一致。",
+    "MOD02": "指南p5：新TF审阅实际以train=0/training=False、learning_phase0及关闭增强运行；读取当前源码中指定模型推理输入，未使用训练默认配置。",
+    "MOD03": "指南p4/6及答复Q5/7：保留原浮点checkpoint、层数和算子结构；训练600/层生成整数表示和误差补偿量化码。量化在W副本上生成qw，未回写或训练原浮点模型。当前冻结代码及参数逐文件精确匹配。",
+    "MOD05": "指南p5：指定SpeechFeatures、投影、class/positionembedding及原模型推理形成99×64输入；模型新运行的FFN输入与声明缓存一致，软件预处理边界与本科必做范围相符。",
+    "MOD06": "指南p5：原模型12层64→256→64结构保持，当前加速器实现各层第一线性变换。新RTL完整16任务包含12层逐层更换W/B，数值与独立参考一致。",
+    "MOD07": "指南p5：指定labels.txt原12类顺序由新模型审阅绑定；硬件任务为单个99×64矩阵，离线验证批处理没有合并成硬件任务。",
+    "MOD08": "指南p6：指定v0.02原始档案和4625唯一所用音频的成员/哈希证据保持有效；新模型运行重新检查600训练、4445验证清单及全部模型输入文件。",
+    "MOD09": "指南p6：采用原AudioProcessor类别映射和静音零波形流程，records_from_manifest恢复原标签/静音记录，未用任意真实音频替代静音。",
+    "MOD10": "指南p6：训练600/层用于标定；冻结后validation4445/层只做验证，本轮12性能任务固定取验证清单第0项。当前inputidentity04及freeze分别绑定样本和数值配置。",
+    "MOD11": "指南p6：本轮没有数值搜索或配置调整；冻结的训练选择脚本、training_sources与参数保持，新的precision04仅读取验证数据和冻结配置并写验证报告。testing未进入当前候选调参。",
+    "MOD12": "指南p6：reference_pipeline实际提取attention/residual后的layernorm1输出，再输入ffn.layers[0]；新TF对训练与验证第0项各12层输入/输出重新核对，层位置及W/B正确。",
+    "MOD13": "指南p4及答复Q7：当前软件模型、输入参数转换和fixed16解码工具均提供；14任务354816raw/q独立参考一致，公共CLI解码完整矩阵且拒绝长度/符号扩展错误；新完整RTL16任务另有服务器回归证据。",
+    "MOD14": "指南p4/10及答复Q5/7：输入sx、偏置单位换算、Cauchy范数界和M/R是格式/量程元数据，逐项审阅了操作数、目的字段和执行边界；同范数不同GEMM的12组变换验证其不是输出替代。64项点积、Alpha、bias及实际requantization在硬件完成，并与独立整数模型逐值对照。",
+    "MOD15": "指南p4/10：装载包仅输入、权重、偏置和M/R；12672输出长度是99×256的固定布局常数。31个ITCM字是CPU调度指令；gold raw/q/matrix仅供测试台比较及完成后的只读物理读回，未进入DUT输入。",
+    "MOD16": "指南p14：DESIGN_SOURCES04逐文件区分自研代码/派生权重/验证夹具，并列出指定E203、KWT模型、数据集及工艺宏资源。第三方原件保留其来源，未作为自主IP申报。",
+    "EV01": "指南精度条款：新precision04按层汇总全部4445验证样本、取12层最大NRMSE=.0010455204922，低于.03；本地得分9.651493。队伍自测与后续组委会冻结600评测区分，未把未知官方数据当成已经运行。",
+    "EV03": "指南有限值要求：公共解码入口验证形状、符号扩展、尺度及有限性；当前14任务解码354816值和完整12层fixed16验证均生成有限结果，未以平均误差掩盖NaN/Inf。",
+    "EV04": "指南每性能任务精度：12个声明工程性能任务分别对原验证集第0项浮点目标计算NRMSE，最大.00121148642592，各自低于.03；输入与该样本逐层精确一致，矩阵码与RTL完整任务逐位对照。官方后续随机12任务未冒充为此自测。"
+  },
+  "evidence_sha256": {
+    "experiments/conservative_bus1_mode0_raw16_20261113/model_origin04/result.json": "4fe9145f4bf1f1884361328504592cb3a40e3b7c06ce97795f9e055ee01abc1d",
+    "experiments/conservative_bus1_mode0_raw16_20261113/model_numeric_provenance04.json": "5aac5f10f76ab51a313c3090a1b723f52d47ded00a4280ac72a78b092c8d597c",
+    "experiments/conservative_bus1_mode0_raw16_20261113/source04_numeric_identity.json": "950563b28edf1b83c44e442c67ebc45762fb1936a013ce1fdb0fef9a866094f1",
+    "experiments/conservative_bus1_mode0_raw16_20261113/results/integer_reference04/result.json": "86f6b36015de6db57db98d5c2c1accd4141408951ad77291e5a9f18b81d1da0b",
+    "experiments/conservative_bus1_mode0_raw16_20261113/results/public_conversion04/result.json": "418c43ef1f191ef3a1128cfe1dbb9f31daefaa9d33a2c573db4ce7333d7e5bd9",
+    "experiments/conservative_bus1_mode0_raw16_20261113/results/fixed16_precision04/result.json": "31c7d94ed35b3ba1ebf7715652018e52956508b9b18c995fc17913402d02b06d",
+    "experiments/conservative_bus1_mode0_raw16_20261113/results/performance_precision04/result.json": "f16a1e034ef0fea98ab81df699530b394aaaa9ff91c059172a9039075b5d7c42",
+    "experiments/conservative_bus1_mode0_raw16_20261113/performance_input_identity04.json": "51dbf95ce3a59a46e022e83e4b8415ac99ba04d6d1254dccdfd37bf393a5c477",
+    "experiments/conservative_mode0_raw16_20261112/numeric_conversion_boundary_review.json": "2e79d7d8bfa0af7210c0fd2980f558f4f7f5f8402e111e967f06bdc7d4fb9fda",
+    "experiments/conservative_bus1_mode0_raw16_20261113/DESIGN_SOURCES04.json": "16535554cea91af061ed3ba10c588616516543ef514e77e15ee37e816ede1664"
+  },
+  "fresh_model_tensors_verified": 162,
+  "fresh_precision_score": 9.651493169266487,
+  "frozen_project_manifest_sha256": "3cd1ff2bf37de0745efc9998461d4cbd4a1b27954fe440d88d843c37410ccbc9",
+  "RTL_server_receipt": "experiments/shared_bus_write_allocate_20261111/results/bus1_progress555_receipt/result.json",
+  "pass": true
+}

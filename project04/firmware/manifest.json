@@ -1,0 +1,43 @@
+{
+  "scope": "MODE0 CPU configuration/WFI/START/status/full-matrix final-word readback; no task payload in TCM",
+  "cpu_code_bytes": 248,
+  "ITCM64_words": 31,
+  "format_magic": "0x0b0b0d16",
+  "expected_result_words": 12672,
+  "files_sha256": {
+    "cpu_copy_driver.s": "06f4b0bf2faae59fb071bef8d37201d9a43fd8841aaeef76abc28d2f86a58f0c",
+    "cpu_copy_driver.o": "11f0342a67885a147301717151be5c9e5f9ec84167d2935172c47e576d351b4d",
+    "cpu_copy_driver.elf": "9004d0174b01dcfa17f03a4b12fbe0a1cd0326f619646192ab90ff76a0c37406",
+    "cpu_copy_driver.bin": "dec225e597c3fb143cc9b37fa5ddead48eb3b2bd316881eb8a107e8063ff8dec",
+    "cpu_copy_driver64.hex": "6cfa3e36d7d25b5da1f9d778c57bb8e6abc60b0a646b0eb140b1f188274b35cb",
+    "cpu_params.vh": "2098f7ab3b7a6b054f3d249130c2c9f1b09e9385dc30742c9d93e13625951f2b"
+  },
+  "commands": [
+    [
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/.tools/extras/usr/bin/riscv32-linux-gnu-as",
+      "-march=rv32im_zicsr",
+      "-mabi=ilp32",
+      "-o",
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/experiments/conservative_mode0_raw16_20261112/project/firmware/cpu_copy_driver.o",
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/experiments/conservative_mode0_raw16_20261112/project/firmware/cpu_copy_driver.s"
+    ],
+    [
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/.tools/extras/usr/bin/riscv32-linux-gnu-ld",
+      "-melf32lriscv",
+      "-Ttext=0x80000000",
+      "-e",
+      "_start",
+      "-o",
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/experiments/conservative_mode0_raw16_20261112/project/firmware/cpu_copy_driver.elf",
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/experiments/conservative_mode0_raw16_20261112/project/firmware/cpu_copy_driver.o"
+    ],
+    [
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/.tools/extras/usr/bin/riscv32-linux-gnu-objcopy",
+      "-O",
+      "binary",
+      "--only-section=.text",
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/experiments/conservative_mode0_raw16_20261112/project/firmware/cpu_copy_driver.elf",
+      "/home/lucius/\u6587\u6863/ChatGPT/\u7ade\u8d5b/experiments/conservative_mode0_raw16_20261112/project/firmware/cpu_copy_driver.bin"
+    ]
+  ]
+}

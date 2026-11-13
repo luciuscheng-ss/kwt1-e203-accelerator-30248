@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "review_date": "2026-11-13",
+  "scope": "Unchanged official model and training-frozen numeric provenance reviewed against current source04; old hardware timing/performance not inherited.",
+  "model_runtime_audit_sha256": "55262d045d1399245593f9e46f1d87d2ff642e360416394cb8b75f2d7d78beb6",
+  "all_original_audit_inputs_still_exact": {
+    "experiments/shared_bus_write_allocate_20261111/model60/verify.py": true,
+    "scripts/reference_pipeline.py": true,
+    "artifacts/reference/weights.npz": true,
+    "artifacts/reference/metadata.json": true,
+    "2026芯片设计赛道比赛文件/KWT-1参考模型/models_data_v2_12_labels/kwt1/flags.json": true,
+    "2026芯片设计赛道比赛文件/KWT-1参考模型/models_data_v2_12_labels/kwt1/labels.txt": true,
+    "2026芯片设计赛道比赛文件/KWT-1参考模型/models_data_v2_12_labels/kwt1/best_weights.index": true,
+    "2026芯片设计赛道比赛文件/KWT-1参考模型/models_data_v2_12_labels/kwt1/best_weights.data-00000-of-00001": true,
+    "artifacts/reference/calibration/samples.json": true,
+    "artifacts/reference/validation/samples.json": true
+  },
+  "checkpoint_tensor_match_count": 162,
+  "original_weights_current_project_equal": true,
+  "training_manifest_sha256": "1a57a759c026303f6ee7c10c955bd9707f202cc5c97dddcc4c9c849d76a0ac3c",
+  "validation_manifest_sha256": "f42ee70217f38ba0fb1eb5ca4cba39e190363ff278f1701836a8f37ed6098e4f",
+  "dataset_membership_audit_sha256": "4aa8643db1cadab4f1e557ee1ce8627c9f8a496bf38e6626a6a2f97970c10116",
+  "numeric_freeze_sha256": "f0d58263c179a89d164cffbf3f866db68d52f8c27ead48add034c49896becef2",
+  "all_current_frozen_numeric_inputs_exact": true,
+  "format_conversion_boundary_review_sha256": "2e79d7d8bfa0af7210c0fd2980f558f4f7f5f8402e111e967f06bdc7d4fb9fda",
+  "new_integer_reference_sha256": "86f6b36015de6db57db98d5c2c1accd4141408951ad77291e5a9f18b81d1da0b",
+  "new_public_conversion_sha256": "418c43ef1f191ef3a1128cfe1dbb9f31daefaa9d33a2c573db4ce7333d7e5bd9",
+  "interpretation": "Guide numericformatconversion andQA5/7 cover inputscale,biasunitconversion andM/R metadata; range-bound selfproducts influence representation only, one scale/outputcolumn for all99rows; actual dot64,bias,Alpha,andoutputrequantization remain hardware. No invented namedM/Rspecificruling.",
+  "fresh_model_audit_sha256": "4fe9145f4bf1f1884361328504592cb3a40e3b7c06ce97795f9e055ee01abc1d",
+  "fresh_precision04_sha256": "31c7d94ed35b3ba1ebf7715652018e52956508b9b18c995fc17913402d02b06d",
+  "fresh_precision04_score": 9.651493169266487
+}

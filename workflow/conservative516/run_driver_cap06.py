@@ -1,0 +1,31 @@
+"""Repair90actualmax-load violations using function-equivalent stronger cells."""
+from pathlib import Path
+import json,hashlib,subprocess,time,re,csv
+R=Path('/home/2026contest/server6/s6_19usr/kwt_systembus_joint_20261111_01');C=R/'conservative516';O=C/'synthesis06';assert not O.exists();O.mkdir();sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+parent=json.loads((C/'synthesis04/result.json').read_text());assert parent['pass']and parent['mapped_sha256']=='c8712d910719919e5576c5d7f396f4108b450e099840985fe33487cc3d60e582';assert sha(parent['mapped'])==parent['mapped_sha256'];assert all(sha(p)==h for p,h in parent['library_sha256'].items())
+inv=json.loads((C/'cap_inventory605.json').read_text());assert inv['mapped_sha256']==parent['mapped_sha256'];rows=inv['groups']['max_capacitance'];assert len(rows)==90 and all(v['reference']=='OAI22V2_12TR40'for v in rows);targets=[v['cell']for v in rows]
+loc=Path('/home/2026contest/server6/s6_19usr/kwt_side_20261111_005646/mainchat01/closeout105/resource_locations01.json');config=Path(json.loads(loc.read_text())['config']);libs=json.loads(config.read_text())['libraries']
+for n in ['constraints.sdc','cdc_guard97.tcl','async_cdc388.tcl']:(O/n).write_bytes((C/'synthesis04'/n).read_bytes())
+def tl(xs):return '[list '+' '.join('{'+str(x)+'}'for x in xs)+']'
+cmd=['set_host_options -max_cores 1','set_app_var target_library '+tl(libs['target_db']),'set_app_var link_library '+tl(['*']+list(parent['library_sha256'])),'read_ddc {'+str(C/'synthesis04/mapped.ddc')+'}','current_design e203_soc_top','link','set_operating_conditions -library {'+libs['operating_library']+'} {'+libs['operating_conditions']+'}','source {'+str(O/'constraints.sdc')+'}','set audit_out {'+str(O)+'}','source {'+str(O/'cdc_guard97.tcl')+'}','source {'+str(O/'async_cdc388.tcl')+'}',
+ 'set oldref [get_lib_cells -quiet */OAI22V2_12TR40]','set newref [get_lib_cells -quiet */OAI22V4_12TR40]','if {[sizeof_collection $oldref]!=1||[sizeof_collection $newref]!=1} {error "Expectedexactold/newOAI22librarycells"}',
+ 'proc pinsig06 {ref} {set out {};foreach_in_collection p [get_lib_pins [get_object_name $ref]/*] {set n [lindex [split [get_object_name $p] /] end];set d [get_attribute $p direction];set f [get_attribute -quiet $p function];lappend out [list $n $d $f]};return [lsort $out]}',
+ 'set olds [pinsig06 $oldref];set news [pinsig06 $newref];if {$olds ne $news} {error "OAI22pin/functionmismatch"}',
+ 'set oldmax [get_attribute [get_lib_pins [get_object_name $oldref]/ZN] max_capacitance];set newmax [get_attribute [get_lib_pins [get_object_name $newref]/ZN] max_capacitance];if {$newmax<1.1*$oldmax} {error "Noactualdrivemargin"}',
+ 'set f [open {'+str(O/'cell_function_equivalence.tsv')+'} w];puts $f "old\tnew\toldmax\tnewmax\tpins";puts $f "[get_object_name $oldref]\t[get_object_name $newref]\t$oldmax\t$newmax\t$olds";close $f',
+ 'set targets '+tl(targets),'set cells [get_cells $targets]','if {[sizeof_collection $cells]!=90} {error "Expected90actualtargetcells"}',
+ 'foreach_in_collection c $cells {if {[get_attribute $c ref_name] ne "OAI22V2_12TR40"} {error "Wrongtargetreference"}}',
+ 'size_cell $cells [get_object_name $newref]','set_dont_touch $cells true',
+ 'compile -incremental_mapping -map_effort high','set_fix_hold [all_clocks]','compile -incremental_mapping -only_hold_time -map_effort high',
+ 'redirect {'+str(O/'design_check.rpt')+'} {check_design}','redirect {'+str(O/'area.rpt')+'} {report_area -hierarchy}',
+ 'redirect {'+str(O/'setup.rpt')+'} {report_timing -delay max -max_paths 40 -significant_digits 6}','redirect {'+str(O/'hold.rpt')+'} {report_timing -delay min -max_paths 40 -significant_digits 6}','redirect {'+str(O/'violations.rpt')+'} {report_constraint -all_violators -significant_digits 9}',
+ 'set f [open {'+str(O/'leaf_cells.tsv')+'} w];puts $f "name\tref\tarea\tlibrary_matches";foreach_in_collection c [get_cells -hierarchical -filter {is_hierarchical == false}] {set ref [get_attribute $c ref_name];puts $f "[get_object_name $c]\t$ref\t[get_attribute $c area]\t[sizeof_collection [get_lib_cells -quiet */$ref]]"};close $f',
+ 'write -format verilog -hierarchy -output {'+str(O/'mapped.v')+'}','write -format ddc -hierarchy -output {'+str(O/'mapped.ddc')+'}','write_sdc {'+str(O/'mapped.sdc')+'}','puts {DRIVER_CAP06_MAPPING_DONE}','quit']
+(O/'run.tcl').write_text('\n'.join(cmd)+'\n');q=dict(parent);q.update(pass_=False,parent_mapped_sha256=parent['mapped_sha256'],parent_DDC_sha256=sha(C/'synthesis04/mapped.ddc'),driver_cap_inventory_sha256=sha(C/'cap_inventory605.json'),scope=__doc__,purpose=__doc__,mapped=str(O/'mapped.v'),leaf_cells=str(O/'leaf_cells.tsv'),constraints_sha256=sha(O/'constraints.sdc'),script_sha256=sha(__file__));q['pass']=False;q.pop('mapped_sha256',None);q.pop('DC_setup_slacks_ns',None);q.pop('DC_hold_slacks_ns',None)
+def save():(O/'result.json').write_text(json.dumps(q,indent=2)+'\n')
+save();start=time.time()
+with(O/'tool.log').open('w')as f:z=subprocess.run(['/eda/synopsys/dc/dc_2022.03-SP5-5/bin/dc_shell','-f',str(O/'run.tcl')],cwd=O,stdin=subprocess.DEVNULL,stdout=f,stderr=subprocess.STDOUT,timeout=14400)
+t=(O/'tool.log').read_text(errors='replace');q.update(exit=z.returncode,seconds=time.time()-start,errors=re.findall(r'^\s*Error:.*$',t,re.M));save();assert z.returncode==0 and not q['errors']and'DRIVER_CAP06_MAPPING_DONE'in t
+actual=list(csv.DictReader((O/'leaf_cells.tsv').open(),delimiter='\t'));byname={v['name']:v for v in actual};assert all(byname[n]['ref']=='OAI22V4_12TR40'for n in targets)
+real=[v for v in actual if v['ref'].lower()not in['**logic_0**','**logic_1**']];assert all(int(v['library_matches'])>0 and not v['ref'].startswith('GTECH')for v in real)
+q.update(mapped_sha256=sha(O/'mapped.v'),whole_leaf_area_library_units=sum(float(v['area'])for v in real),leaf_cells_count=len(real),actual90_function_equivalent_drivers_resized=True,cell_function_equivalence_sha256=sha(O/'cell_function_equivalence.tsv'));q['DC_setup_slacks_ns']=[float(v)for v in re.findall(r'slack\s*\([^)]*\)\s*([+-]?[0-9.]+)',(O/'setup.rpt').read_text(),re.I)];q['DC_hold_slacks_ns']=[float(v)for v in re.findall(r'slack\s*\([^)]*\)\s*([+-]?[0-9.]+)',(O/'hold.rpt').read_text(),re.I)];q['pass']=True;save()

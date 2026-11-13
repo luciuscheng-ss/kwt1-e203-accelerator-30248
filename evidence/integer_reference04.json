@@ -1,0 +1,110 @@
+{
+  "pass": true,
+  "cases": [
+    {
+      "case": 0,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 1,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 2,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 3,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 4,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 5,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 6,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 7,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 8,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 9,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 10,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 11,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 12,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    },
+    {
+      "case": 13,
+      "source_words": 8168,
+      "raw_values_checked": 25344,
+      "quant_values_checked": 25344,
+      "fixed_matrix_words": 12672
+    }
+  ],
+  "raw_values_checked": 354816,
+  "quant_values_checked": 354816,
+  "same_numeric_freeze": true,
+  "source_conversion_and_layout_roundtrip_exact": true,
+  "fixed16_decode_preserves_every_code": true,
+  "scope": "Software integer reference and submitted vectors; actual RTL separately checked",
+  "freeze_sha256": "f0d58263c179a89d164cffbf3f866db68d52f8c27ead48add034c49896becef2"
+}
